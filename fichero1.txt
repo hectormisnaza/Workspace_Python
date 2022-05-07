@@ -1,0 +1,4 @@
+
+Esta es la primera fila del fichero.
+Esta es la segunda fila.
+Este es un texto incluido en la tercera fila
