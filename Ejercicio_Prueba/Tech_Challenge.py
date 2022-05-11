@@ -6,20 +6,28 @@ while True:
         list2 = []
         cdatos = ""
 
-        def add(list1, cdatos):
-            getNumbers(cdatos)
-            print(cdatos)
-            #cdatos = int(cdatos)
+        def add(list1):
+            while True:
+                try:
+                    cdatos = int(input("How many values do you want to enter? here =>"))
+                except ValueError:
+                    print("the value entered is not a number")
+                    continue
+                if cdatos < 0:
+                    print("the value entered is not a number")
+                    continue
+                else:
+                    break
+            print(f"the value entered {cdatos}  values")
             for value in range(cdatos):
                 try:
-                    user_input = input(txt_0)
+                    user_input = int(input(txt_0))
                 except ValueError:
                     print("the value entered is not a number")
                 else:
                     print(f"{txt_1} {user_input}")
                     list1.append(user_input)
             print(f"your number list : ", list1)
-
 
         def less(list1, list2):
             dato1 = int(input(f"{txt_3}  {capture} here=>"))
@@ -50,15 +58,6 @@ while True:
                     list2.append(valor)
             print(f"the numbers that are between {dato1} and {dato2} are: ", list2)
 
-        def getNumbers(cdatos):
-            while True:
-                cdatos = int(input("How many values do you want to enter? here =>"))
-                try:
-                    cdatos = int(cdatos)
-                    print(f"the value entered {cdatos}  values")
-                    return cdatos
-                except ValueError:
-                    print("the value entered is not a number")
                 #else:
                 #    cdt = cdatos
                 #    print(f"the value entered {cdatos}  values")
@@ -70,7 +69,7 @@ while True:
         txt_2 = (" The following numbers are")
         txt_3 = (" enter your number for basic statistics ")
 
-        add(list1, cdatos)
+        add(list1)
 
         capture = input(
             'what operation do you want to perform? insert: '
