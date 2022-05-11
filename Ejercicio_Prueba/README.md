@@ -5,7 +5,7 @@ Contains a description file description.docx for the program.
 - Python 3.8
 ## Chanllenges
 - Perform error validations on values that are not expected.
-- Not knowing what to expect as delivery.
+- it was missing some details related with the delivery.
 ## Improvements
-- Perform error validations on values that do not correspond.
-- Graphic environment to make it pleasant for the user, it would be achieved with more time, I send the test as soon as possible.
+- To perform error validations on values that do not correspond.
+- Graphic environment to make it pleasant for the user.
