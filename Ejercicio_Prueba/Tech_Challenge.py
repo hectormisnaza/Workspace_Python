@@ -7,6 +7,7 @@ while True:
         cdatos = ""
 
         def add(list1):
+            global cdatos
             while True:
                 try:
                     cdatos = int(input("How many values do you want to enter? here =>"))
@@ -58,16 +59,12 @@ while True:
                     list2.append(valor)
             print(f"the numbers that are between {dato1} and {dato2} are: ", list2)
 
-                #else:
-                #    cdt = cdatos
-                #    print(f"the value entered {cdatos}  values")
-
         print("we will create a list, with the list we execute basic statistics ")
 
-        txt_0 = (" enter value number, here =>")
-        txt_1 = (" entered value: ")
-        txt_2 = (" The following numbers are")
-        txt_3 = (" enter your number for basic statistics ")
+        txt_0 = " enter value number, here =>"
+        txt_1 = " entered value: "
+        txt_2 = " The following numbers are"
+        txt_3 = " enter your number for basic statistics "
 
         add(list1)
 
