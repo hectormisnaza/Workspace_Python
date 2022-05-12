@@ -1,14 +1,20 @@
-while True:
-    try:
-        edad = int(input("Escribe tu edad: "))
-    except ValueError:
-        print("Debes escribir un número.")
-        continue
-    if edad < 0:
-        print("Debes escribir un número positivo.")
-        continue
-    else:
-        break
+friends = ['Taylor', 'Alex', 'Pat', 'Eli']
+for friend in friends:
+    print('Hi ', friend)
 
 
-int(input("How many values do you want to enter? here =>"))
+color = "Green"
+thing = "Hope"
+print(color + " is the color of " + thing)
+
+semana = 7
+dia = 24
+minutos = 60
+segundos = 60
+print(semana * dia * minutos * segundos)
+
+disk_size = 16*1024*1024*1024
+sector_size = 512
+sector_amount = disk_size * sector_amount
+
+print(sector_amount)
