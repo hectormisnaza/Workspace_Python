@@ -395,4 +395,70 @@ def retry(operation, attempts):
 retry(create_user, 3)
 retry(stop_service, 5)
 # --------------------------------------------------------------
+def factorial(n):
+  if n < 2:
+    print ("returning 1")
+    return 1
+  result = n * factorial(n-1)
+  print("Returning " + str(result)+" for factorial of "+ str(n))
+  return result
+
+factorial (5)
+# --------------------------------------------------------------
+def sum_positive_numbers(n):
+  # The base case is n being smaller than 1
+  if n < 1:
+    return n
+  # The recursive case is adding this number to
+  # the sum of the numbers smaller than this one.
+  return n + sum_positive_numbers(n - 1)
+
+
+print(sum_positive_numbers(3))  # Should be 6
+print(sum_positive_numbers(5))  # Should be 15
+# --------------------------------------------------------------
+def is_power_of(number, base):
+  # Base case: when number is smaller than base.
+  if number < base:
+    # If number is equal to 1, it's a power (base**0).
+    return number==1
+  result = number//base
+
+  # Recursive case: keep dividing number by base.
+  return is_power_of(result, base)
+
+print(is_power_of(8,2)) # Should be True
+print(is_power_of(64,4)) # Should be True
+print(is_power_of(70,10)) # Should be False
+# --------------------------------------------------------------
+def count_users(group):
+  count = 0
+  for member in get_members(group):
+    count += 1
+    if is_group(member):
+      count += count_users(member) -1
+  return count
+
+print(count_users("sales")) # Should be 3
+print(count_users("engineering")) # Should be 8
+print(count_users("everyone")) # Should be 18
+# --------------------------------------------------------------
+def sum_positive_numbers(n):
+  result = 0
+  for x in range (n+1):
+    result += x
+  return result
+
+print(sum_positive_numbers(3)) # Should be 6
+print(sum_positive_numbers(5)) # Should be 15
+# --------------------------------------------------------------
+def sum_positive_numbers(n):
+  if n <= 1:
+    return n
+  return n + sum_positive_numbers (n-1)
+
+print(sum_positive_numbers(3)) # Should be 6
+print(sum_positive_numbers(5)) # Should be 15
+# --------------------------------------------------------------
+# --------------------------------------------------------------
 # --------------------------------------------------------------
