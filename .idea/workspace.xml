@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c10a4b15-6d27-4950-aa9f-6cf29f208e9e" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/Automation with Python/Crash Course on Python/Week For/Contenido_week_4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Automation with Python/Crash Course on Python/Week Tree/Contenido_week_3.py" afterDir="false" />
+>>>>>>> 4eca35996d27045bdcee5b0f12d3109d32b88967
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,6 +188,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/otro.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
