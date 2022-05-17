@@ -1,9 +1,6 @@
-def factorial(n):
-    result = 0
-    for x in range(1, n +1):
-        result = result + x
-    return result
+def votes(params):
+	for vote in params:
+	    print("Possible option:" + vote)
 
 
-for n in range(1,5):
-    print(n, factorial(n))
+votes(['yes', 'no', 'maybe'])
