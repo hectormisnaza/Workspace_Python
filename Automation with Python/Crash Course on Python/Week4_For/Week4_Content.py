@@ -32,10 +32,9 @@ print(first_and_last("tree"))
 print(first_and_last(""))
 
 # Creating New Strings
-"""
-Using the index method, find out the position of "x" in "supercalifragilisticexpialidocious".
-"""
-word = "supercalifragilisticexpialidocious" 
+""" Using the index method, find out the position of "x" in "supercalifragilisticexpialidocious". """
+
+word = "supercalifragilisticexpialidocious"
 print(word.index("x"))
 
 # More String Methods
@@ -103,6 +102,52 @@ print(skip_elements(
     ['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach']))  # Should be ['Orange', 'Strawberry', 'Peach']
 print(skip_elements([]))  # Should be []
 
+"""Using the "split" string method from the preceding lesson, complete the get_word function to return the {n}th word 
+from a passed sentence. For example, get_word("This is a lesson about lists", 4) should return "lesson", which is the 
+4th word in this sentence. Hint: remember that list indexes start at 0, not 1. """
+
+
+def get_word(sentence, n):
+    # Only proceed if n is positive
+    if n > 0:
+        words = sentence.split()
+        # Only proceed if n is not more than the number of words
+        if n <= len(words):
+            return words[n - 1]
+    return ""
+
+
+print(get_word("This is a lesson about lists", 4))  # Should print: lesson
+print(get_word("This is a lesson about lists", -4))  # Nothing
+print(get_word("Now we are cooking!", 1))  # Should print: Now
+print(get_word("Now we are cooking!", 5))  # Nothing
+
+"""The skip_elements function returns a list containing every other element from an input list, starting with the 
+first element. Complete this function to do that, using the for loop to iterate through the input list. """
+
+
+def skip_elements(elements):
+    # Initialize variables
+    new_list = []
+    i = 0
+
+    # Iterate through the list
+    for elem in elements:
+        # Does this element belong in the resulting list?
+        if i % 2 == 0:
+            # Add this element to the resulting list
+            new_list.append(elem)
+        # Increment i
+        i += 1
+
+    return new_list
+
+
+print(skip_elements(["a", "b", "c", "d", "e", "f", "g"]))  # Should be ['a', 'c', 'e', 'g']
+print(skip_elements(
+    ['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach']))  # Should be ['Orange', 'Strawberry', 'Peach']
+print(skip_elements([]))  # Should be []
+
 # Lists and Tuples
 """The guest_list function reads in a list of tuples with the name, age, and profession of each party guest, 
 and prints the sentence "Guest is X years old and works as __." for each one. For example, guest_list(('Ken', 30, 
@@ -136,6 +181,19 @@ print(skip_elements_enumerate(["a", "b", "c", "d", "e", "f", "g"]))  # Should be
 print(skip_elements_enumerate(
     ['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach']))  # Should be ['Orange', 'Strawberry', 'Peach']
 
+# Tuplas
+"""Let's use tuples to store information about a file: its name, its type and its size in bytes. Fill in the gaps in 
+this code to return the size in kilobytes (a kilobyte is 1024 bytes) up to 2 decimal places. """
+
+
+def file_size(file_info):
+    name, type, size = file_info
+    return ("{:.2f}".format(size / 1024))
+
+print(file_size(('Class Assignment', 'docx', 17875)))  # Should print 17.46
+print(file_size(('Notes', 'txt', 496)))  # Should print 0.48
+print(file_size(('Program', 'py', 1239)))  # Should print 1.21
+
 # List Comprehension
 """Complete the skip_elements function to return every other element from the list, this time using a list 
 comprehension to generate the new list based on the previous one, where elements in odd positions are skipped. """
@@ -155,7 +213,6 @@ print(skip_elements_list_comprehension(
 an entry for Epilogue on page 39. 2) Change the page number for Chapter 3 to 24. 3) Display the new dictionary 
 contents. 4) Display True if there is Chapter 5, False if there isn't. """
 
-
 toc = {"Introduction": 1, "Chapter 1": 4, "Chapter 2": 11, "Chapter 3": 24, "Chapter 4": 30, "Epilogue": 39}
 print(toc)  # What are the current contents?
 print("Chapter 5" in toc)  # Is there a Chapter 5?
@@ -163,7 +220,6 @@ print("Chapter 5" in toc)  # Is there a Chapter 5?
 # Iterating over the Contents of a Dictionary
 """Complete the code to iterate through the keys and values of the cool_beasts dictionary. Remember that the items 
 method returns a tuple of key, value for each element in the dictionary. """
-
 
 cool_beasts = {"octopuses": "tentacles", "dolphins": "fins", "rhinos": "horns"}
 for beast, feature in cool_beasts.items():
@@ -174,7 +230,6 @@ for beast, feature in cool_beasts.items():
 a list containing multiple values. Here we have a dictionary called "wardrobe" with items of clothing and their 
 colors. Fill in the blanks to print a line for each item of clothing with each color, for example: "red shirt", 
 "blue shirt", and so on. """
-
 
 wardrobe = {"shirt": ["red", "blue", "white"], "jeans": ["blue", "black"]}
 for cloth in wardrobe:
