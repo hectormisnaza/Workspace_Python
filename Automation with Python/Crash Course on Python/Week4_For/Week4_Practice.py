@@ -49,3 +49,20 @@ print (type(result))
 
 hours, minutes, seconds = result
 print (hours, minutes, seconds)
+
+#Practice tuplas y list
+""" Tuplas """
+
+animals = ['Lion','Zebra','Dolphin', 'Monkey']
+chars = 0
+
+for animal in animals:
+	chars += len(animal)
+
+print(f'Total characters: {chars}, average length: {chars/len(animals)}')
+
+#example  tuplas y list
+winners = ['Ashley', 'Dylan', 'Reese']
+
+for index, person in enumerate(winners):
+	print(f'{index+1} - {person}')

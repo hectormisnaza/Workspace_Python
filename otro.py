@@ -1,14 +1,11 @@
-def convert_seconds(seconds):
-	hours = seconds // 3600
-	minutes = (seconds - hours *3600) // 60
-	remaining_seconds = seconds - hours * 3600 - minutes * 60
-	return hours, minutes, remaining_seconds
-
-result = convert_seconds((5000))
-print (result)
-print (type(result))
-
-hours, minutes, seconds = result
-print (hours, minutes, seconds)
+def skip_elements_enumerate(elements):
+    new_elements = []
+    for index, element in enumerate(elements):
+        if index % 2 == 0:
+            new_elements.append(element)
+    return new_elements
 
 
+print(skip_elements_enumerate(["a", "b", "c", "d", "e", "f", "g"]))  # Should be ['a', 'c', 'e', 'g']
+print(skip_elements_enumerate(
+    ['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach']))  # Should be ['Orange', 'Strawberry', 'Peach']
