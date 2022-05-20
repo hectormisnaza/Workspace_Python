@@ -190,11 +190,25 @@ def file_size(file_info):
     name, type, size = file_info
     return ("{:.2f}".format(size / 1024))
 
+
 print(file_size(('Class Assignment', 'docx', 17875)))  # Should print 17.46
 print(file_size(('Notes', 'txt', 496)))  # Should print 0.48
 print(file_size(('Program', 'py', 1239)))  # Should print 1.21
 
 # List Comprehension
+"""The odd_numbers function returns a list of odd numbers between 1 and n, inclusively. Fill in the blanks in the 
+function, using ListComprehension. Hint:remember that list and range counters start at 0 and end at the limit minus 1"""
+
+
+def odd_numbers(n):
+    return [x for x in range(1, n + 1) if x % 2 != 0]
+
+print(odd_numbers(5))  # Should print [1, 3, 5]
+print(odd_numbers(10))  # Should print [1, 3, 5, 7, 9]
+print(odd_numbers(11))  # Should print [1, 3, 5, 7, 9, 11]
+print(odd_numbers(1))  # Should print [1]
+print(odd_numbers(-1))  # Should print []
+
 """Complete the skip_elements function to return every other element from the list, this time using a list 
 comprehension to generate the new list based on the previous one, where elements in odd positions are skipped. """
 
