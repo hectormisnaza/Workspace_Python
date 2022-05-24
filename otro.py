@@ -1,22 +1,18 @@
-file_counts = {"jpg": 10, "txt": 14, "csv": 2, "py": 23}
-print(file_counts)
+animal = "Hippopotamus"
 
-print(file_counts["txt"])
+print(animal[3:6])
+print(animal[-5])
+print(animal[10:])
 
-file_counts["cfg"] = 8
-print(file_counts)
+colors = ["red", "white", "blue"]
+colors.insert(2, "yellow")
 
-file_counts["csv"] = 17
-print(file_counts)
-print(type(file_counts))
+print(colors)
 
+colors[2] = "black"
 
-def guest_list(guests: object) -> object:
-    for guest in guests:
-        name, age, job = guest
-        print(f"{name} is {age} years old an works as {job}")
-        print(type(guest))
-        print(type(guests))
+print(colors)
 
-guest_list([('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")])
-#pytest
+host_addresses = {"router": "192.168.1.1", "localhost": "127.0.0.1", "google": "8.8.8.8"}
+print(host_addresses.keys())
+print(host_addresses.values())
