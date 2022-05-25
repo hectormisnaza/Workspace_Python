@@ -12,7 +12,6 @@ hamlet = Piglet()
 hamlet.speak()
 
 # example 2  Instance Methods
-
 class Piglet():
     # name = ""
     def speak(self):
@@ -35,13 +34,25 @@ mike.speak()
 mike.year = 1.5
 print(f"My name is {mike.name}, tengo {mike.years()}, y hago:{mike.speak()}")
 
+# Constructors and Other Special Methods
+
+class Apple:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+    def __str__(self):
+        return "This apple is {} and its flavor is {}.".format(self.color, self.flavor)
 
 
+jonagold = Apple("red","sweet")
 
+print(f"My color is {jonagold.color}, and my flavor is {jonagold.flavor}")
+print(jonagold)
 
 """Inheritance
-
-Problem: Let’s create a new class together and inherit from it. Below we have a base class called Clothing. Together, let’s create a second class, called Shirt, that inherits methods from the Clothing class. Fill in the blanks to make it work properly."""
+Problem: Let’s create a new class together and inherit from it. Below we have a base class called Clothing. 
+Together, let’s create a second class, called Shirt, that inherits methods from the Clothing class. Fill in the blanks 
+to make it work properly."""
 
 class Clothing:
   material = ""
