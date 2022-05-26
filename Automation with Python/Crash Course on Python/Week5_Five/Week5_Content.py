@@ -49,27 +49,30 @@ jonagold = Apple("red","sweet")
 print(f"My color is {jonagold.color}, and my flavor is {jonagold.flavor}")
 print(jonagold)
 
-"""Inheritance
-Problem: Let’s create a new class together and inherit from it. Below we have a base class called Clothing. 
-Together, let’s create a second class, called Shirt, that inherits methods from the Clothing class. Fill in the blanks 
-to make it work properly."""
+#  Object Inheritance
 
-class Clothing:
-  material = ""
-  def __init__(self,name):
-    self.name = name
-  def checkmaterial(self):
-	  print("This {} is made of {}".format(self.name,self.material))
+class Animal:
+    sound = "Oink!"
+    def __init__(self, name):
+        self.name = name
+        #self.sound = sound
+    def speak(self):
+        return ("{sound} I'm {name}! {sound}".format(name=self.name, sound=self.sound))
 
-class Shirt(Clothing):
-  material="Cotton"
+class Piglet(Animal):
+    sound = "Oink!"
 
-polo = Shirt("Polo")
-polo.checkmaterial()
-This Polo is made of Cotton
-Composition
+hamlet = Piglet("Hamlet")
+print(hamlet.speak())
 
-""" Problem: Your mission: Finish the "Stock_by_Material" method and iterate over the amount of each item of a given material that is in stock. When you’re finished, the script should add up to 10 cotton Polo shirts. """
+class Cow(Animal):
+    sound = "Moo"
+
+milk = Cow("MilkW")
+print(milk.speak())
+
+""" Problem: Your mission: Finish the "Stock_by_Material" method and iterate over the amount of each item of a given 
+material that is in stock. When you’re finished, the script should add up to 10 cotton Polo shirts. """
 
 class Clothing:
   stock={ 'name': [],'material' :[], 'amount':[]}
@@ -100,3 +103,27 @@ polo.add_item(polo.name, polo.material, 4)
 sweatpants.add_item(sweatpants.name, sweatpants.material, 6)
 current_stock = polo.Stock_by_Material("Cotton")
 print(current_stock)
+
+
+# Classes and Methods
+"""Inheritance"""
+
+class Fruit:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+
+
+class Apple(Fruit):
+    pass
+
+
+class Grape(Fruit):
+    pass
+
+
+granny_smith = Apple("green", "tart")
+carnelian = Grape("purple", "sweet")
+
+print(granny_smith.color, granny_smith.flavor)
+print(carnelian.color, carnelian.flavor)

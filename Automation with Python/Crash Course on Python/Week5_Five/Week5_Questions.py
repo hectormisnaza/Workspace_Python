@@ -21,7 +21,6 @@ Fill in the blanks so that
 class Person:
     def __init__(self, name):
         self.name = name
-
     def greeting(self):
         # Should return "hi, my name is " followed by the name of the Person.
         return ("hi, my name is {}".format(self.name))
@@ -31,3 +30,23 @@ class Person:
 some_person = Person("Héctor")
 # Call the greeting method
 print(some_person.greeting())
+
+
+"""Inheritance
+Problem: Let’s create a new class together and inherit from it. Below we have a base class called Clothing. 
+Together, let’s create a second class, called Shirt, that inherits methods from the Clothing class. Fill in the blanks 
+to make it work properly."""
+
+class Clothing:
+material: str = ""
+    def __init__(self,name):
+    self.name = name
+    def checkmaterial(self):
+	    print("This {} is made of {}".format(self.name,self.material))
+
+class Shirt(Clothing):
+material="Cotton"
+
+polo = Shirt("Polo")
+polo.checkmaterial()
+# This Polo is made of Cotton Composition
