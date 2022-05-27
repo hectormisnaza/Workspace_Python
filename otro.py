@@ -1,19 +1,25 @@
 class Animal:
-    #sound = "Oink!"
-    def __init__(self, name):
+    # sound = "Oink!"
+    def __init__(self, name, sound):
         self.name = name
-        #self.sound = sound
+        self.sound = sound
+
     def speak(self):
-        return ("{sound} I'm {name}! {sound}".format(name=self.name, sound=self.sound))
+        name = self.name
+        sound = self.sound
+        return (f"{sound} I'm {name}! {sound}")
+
 
 class Piglet(Animal):
-    sound = "Oink!"
+    pass
 
-hamlet = Piglet("Hamlet")
-print(hamlet.speak())
 
 class Cow(Animal):
-    sound = "Moo"
+    pass
 
-milk = Cow("MilkW")
+
+hamlet = Piglet("Hamlet", "Oink!")
+print(hamlet.speak())
+
+milk = Cow("MilkW", "Moo!")
 print(milk.speak())
