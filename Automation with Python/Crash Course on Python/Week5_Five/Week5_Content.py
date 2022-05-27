@@ -126,17 +126,18 @@ class Fruit:
         self.color = color
         self.flavor = flavor
 
-
 class Apple(Fruit):
     pass
 
-
 class Grape(Fruit):
     pass
-
 
 granny_smith = Apple("green", "tart")
 carnelian = Grape("purple", "sweet")
 
 print(granny_smith.color, granny_smith.flavor)
 print(carnelian.color, carnelian.flavor)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5d5868d112fde3e2ad9afd7abbfc433b09d2262f
