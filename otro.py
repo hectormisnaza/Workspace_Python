@@ -1,38 +1,34 @@
-<<<<<<< HEAD
-class Repository:
-    def __init__(self):
-        self.packages = {}
-    def add_package(self, package):
-        self.packages[package.name] = package
-    def total_sice(self):
-        result = 0
-        for package in self.packages.values():
-            result += package.size
-        return result
-=======
-class Animal:
-    # sound = "Oink!"
-    def __init__(self, name, sound):
-        self.name = name
-        self.sound = sound
+""" Funcion de ayuda para ordenar la lista """
+ def get_event_date(event):
+    return event_date
 
-    def speak(self):
-        name = self.name
-        sound = self.sound
-        return (f"{sound} I'm {name}! {sound}")
+""" Funcion para llamar usuarios actuales """
+def current_users(events):
+    # Ordenar por definicion de clave
+    events.sor(key = get_event_date)
+    # Creamos el diccionario donde almacenaremos los nombre de los usuario finales de una maquina
+    machines ={}
+    # Repetimos lista de eventos
+    for event in events:
+        if event.machine not in machines:
+            machines[event.machine] = set ()
+        if event.type = "login":
+            machines[event.machine].add(event.user)
+        elif event.type = "logout":
+            machines[event.machine].remove(event.user)
+    # El diccionario contendra todas las maquinas que hemos visto como claves
+    return machines
 
-
-class Piglet(Animal):
-    pass
-
-
-class Cow(Animal):
-    pass
+""" Creamos nueva funcion para generar el reporte """
+def generate_report(machines):
+    for machine, users in machines.items():
+        # Asegúrese de no imprimir ninguna máquina en la que nadie haya iniciado sesión actualmente
+        if len(users) > 0:
+            user_list = ", ".join(users)
+            print("{}: {}".format(machine, user_list))
 
 
-hamlet = Piglet("Hamlet", "Oink!")
-print(hamlet.speak())
 
-milk = Cow("MilkW", "Moo!")
-print(milk.speak())
->>>>>>> 5d5868d112fde3e2ad9afd7abbfc433b09d2262f
+
+
+
