@@ -1,0 +1,38 @@
+Pregunta 1
+If we want to see a specific commit, which command would we use along with the commit ID?
+
+* git log --stat
+* git show
+* git log -p
+* git commit -am
+Correcto
+    You nailed it! Taking the commit ID, git show will show information about the commit and its associated patch.
+
+Pregunta 2
+If we need to delete a file from our repository, we'll need to run a command to delete the file and then stage and commit the change. Which command would we use to delete the file?
+* git rm
+* git mv
+* git diff
+* git del
+Correcto
+    Woohoo! This command removes files from the working tree and from the index.
+
+Pregunta
+What is the purpose of the git checkout command?
+
+* It finalizes staged changes.
+* It reverts changes to modified files before they are staged.
+* It skips staging and directly commits.
+* It displays the current status of the commit.
+Correcto
+    Right on! git checkout restores files to the latest stored snapshot, reverting any changes before staging.
+
+Pregunta
+Which of the following is true about the git revert command?
+
+* It undoes a commit as though it never happened.
+* It creates a new commit with inverse changes.
+* The output of git revert is not the same as a regular commit.
+* It does not include the ID of the commit that was reverted.
+Correcto
+Awesome! With git revert, a new commit is created with inverse changes. This cancels previous changes instead of making it as though the original commit never happened.
