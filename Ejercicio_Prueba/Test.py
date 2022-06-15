@@ -1,5 +1,5 @@
 ##Q1: Giving the following string
-import operator
+#import operator
 
 sample = "aaabbbccbacdeb"
 ##Print the 3 most common characters along with their occurrence count each on a separate line.
@@ -16,10 +16,11 @@ for val in sample:
     else:
         list_dictionary[val] += 1
 sorted_list_dic = sorted(list_dictionary.items(), key=lambda x:x[1], reverse=True)
+print(sorted_list_dic[:3])
 
-for val in sorted_list_dic[:3]:
-    print(val)
-print(list_dictionary)
+#for val in sorted_list_dic[:3]:
+    #print(val)
+#print(list_dictionary)
 
 def count_letter (text):
     dictionary_one = {}
@@ -29,10 +30,9 @@ def count_letter (text):
         dictionary_one[letter] +=1
     return dictionary_one
 
-print (count_letter(sample))
+#print (count_letter(sample))
 
 print(sorted(list_dictionary.items(), key=operator.itemgetter(1), reverse=True)[:3])
-print(sorted_list_dic[:3])
 
 """ Q2: Giving two words please provide a list in alphabetical order of common characters found in both words, please 
 avoid using nested loops """

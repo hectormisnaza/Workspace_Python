@@ -75,7 +75,9 @@ print(factorial(5)) # should return 120
 # Recursion
 # What is recursion?
 """
-The function sum_positive_numbers should return the sum of all positive numbers between the number n received and 1. For example, when n is 3 it should return 1+2+3=6, and when n is 5 it should return 1+2+3+4+5=15. Fill in the gaps to make this work:
+The function sum_positive_numbers should return the sum of all positive numbers between the number n received and 1. 
+For example, when n is 3 it should return 1+2+3=6, and when n is 5 it should return 1+2+3+4+5=15. Fill in the gaps to 
+make this work:
 """
 def sum_positive_numbers(n):
     # The base case is n being smaller than 1
